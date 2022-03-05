@@ -65,17 +65,17 @@ body {
 #lunch > img {
   position: absolute;
   left: 4%;
-  top: 53%;
+  top: 25%;
 }
 #nap > img {
   position: absolute;
   left: 4%;
-  top: 28%;
+  top: 49%;
 }
 #night > img {
   position: absolute;
   left: 4%;
-  top: 75%;
+  top: 72%;
 }
 .content2 {
   background-color: white;
