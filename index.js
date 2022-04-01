@@ -1,3 +1,8 @@
+var wakeup = document.querySelector("#wakeup-time");
+var lunch = document.querySelector("#lunch-time");
+var nap = document.querySelector("#nap-time");
+var night = document.querySelector("#night-time");
+
 function displayTime() {
   var dateTime = new Date();
   var hrs = dateTime.getHours();
@@ -27,15 +32,28 @@ function displayTime() {
   document.getElementById("minutes").innerText = min;
   document.getElementById("seconds").innerText = sec;
 }
-setInterval(displayTime, 10);
+displayTime();
+setInterval(displayTime, 1000);
 //=========
 
-function setTime() {
-  var wakeup = document.querySelector("#wakeup-time");
-  var lunch = document.querySelector("#lunch-time");
-  var nap = document.querySelector("#nap-time");
-  var night = document.querySelector("#night-time");
+// function setTime() {
+//   var wakeup = document.querySelector("#wakeup-time");
+//   var lunch = document.querySelector("#lunch-time");
+//   var nap = document.querySelector("#nap-time");
+//   var night = document.querySelector("#night-time");
 
+//   let wakeupText = wakeup.options[wakeup.selectedIndex].text;
+//   let lunchText = lunch.options[lunch.selectedIndex].text;
+//   let napText = nap.options[nap.selectedIndex].text;
+//   let nightText = night.options[night.selectedIndex].text;
+
+//   document.querySelector(".wakeupMsg").innerText = wakeupText;
+//   document.querySelector(".lunchMsg").innerText = lunchText;
+//   document.querySelector(".napMsg").innerText = napText;
+//   document.querySelector(".nightMsg").innerText = nightText;
+// }
+
+function watchTime() {
   let wakeupText = wakeup.options[wakeup.selectedIndex].text;
   let lunchText = lunch.options[lunch.selectedIndex].text;
   let napText = nap.options[nap.selectedIndex].text;
@@ -45,13 +63,6 @@ function setTime() {
   document.querySelector(".lunchMsg").innerText = lunchText;
   document.querySelector(".napMsg").innerText = napText;
   document.querySelector(".nightMsg").innerText = nightText;
-}
-
-function watchTime() {
-  var wakeup = document.querySelector("#wakeup-time");
-  var lunch = document.querySelector("#lunch-time");
-  var nap = document.querySelector("#nap-time");
-  var night = document.querySelector("#night-time");
 
   let wakeupValue = wakeup.value;
   let lunchValue = lunch.value;
@@ -88,6 +99,4 @@ function watchTime() {
       "url(./image/night.png)";
     document.querySelector("#good-wish").innerText = "GOOD NIGHT !! ";
   }
-
-  setTime();
 }
