@@ -129,7 +129,6 @@ html{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  /* margin-top: 4rem; */
   flex: 1 1 50rem;
 }
 .container > .row > .col-1{
@@ -142,7 +141,7 @@ html{
   margin: 0.6rem;
   border-radius: 1rem;
   width: 55rem;
-  height: 45vh;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,7 +245,15 @@ html{
   font-weight: 900;
   font-size: 1.4rem;
 }
-
+footer{
+  background-color: #fff;
+  text-align: center;
+  height: 5rem;
+ margin: 2rem auto;
+}
+footer > b{
+  font-size: 2rem;
+}
 
 
  @media only screen and (max-width: 760px) {
@@ -254,6 +261,12 @@ html{
     font-size:54% ;
   }
  }
+ .container > .row{
+  margin-top: 3rem;
+}
+.container > .row > .col-2 {
+  margin-top: 3rem;
+}
  
 @media only screen and (max-width:460px){
   html{
@@ -265,5 +278,6 @@ html{
   html{
     font-size: 40%;
   }
+ 
   
 }
