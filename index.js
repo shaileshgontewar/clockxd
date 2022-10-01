@@ -70,7 +70,7 @@ function watchTime() {
   let nightValue = night.value;
   let hours = new Date().getHours();
 
-  if (wakeupValue == hours) {
+  if (wakeupValue >= hours) {
     document.querySelector("#msg-text").innerText =
       "GRAB SOME HEALTY BREAKFAST !!!";
     document.querySelector("#msg-img").style.background =
@@ -78,21 +78,21 @@ function watchTime() {
     document.querySelector("#good-wish").innerText =
       "GOOD MORNING !! WAKE UP !!";
   }
-  if (lunchValue == hours) {
+  if (lunchValue >= hours) {
     document.querySelector("#msg-text").innerText = "LET'S HAVE SOME LUNCH !!";
     document.querySelector("#msg-img").style.background =
       "url(./image/lunch.png)";
     document.querySelector("#good-wish").innerText =
       "GOOD AFTERNOON !! FOOD TIME !!";
   }
-  if (napValue == hours) {
+  if (napValue >= hours) {
     document.querySelector("#msg-text").innerText =
       "STOP YAWNING, GET SOME TEA..ITS JUST EVENING!";
     document.querySelector("#msg-img").style.background =
       "url(./image/evening.png)";
     document.querySelector("#good-wish").innerText = "GOOD EVENING !! ";
   }
-  if (nightValue == hours) {
+  if (nightValue >= hours) {
     document.querySelector("#msg-text").innerText =
       "CLOSE YOUR EYES AND GO TO SLEEP";
     document.querySelector("#msg-img").style.background =
